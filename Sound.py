@@ -8,17 +8,17 @@ root=Tk()
 pygame.mixer.init()
 
 def open():
-    song = filedialog.askopenfilename(initialdir="Music/",title="Select the music file",filetypes=(("mp3 files", "*.mp3"),))
+    song = filedialog.askopenfilename(initialdir="C:/Music/",title="Select the music file",filetypes=(("mp3 files", "*.mp3"),))
     # print(root.filename)
-    song=song.replace("Music/","")
+    song=song.replace("C:/Music/","")
     song=song.replace(".mp3","")
     lbx.insert(END,song)
 
 def add_songs():
-    songs = filedialog.askopenfilenames(initialdir="Music/",title="Select the music file",filetypes=(("mp3 files", "*.mp3"),))
+    songs = filedialog.askopenfilenames(initialdir="C:/Music/",title="Select the music file",filetypes=(("mp3 files", "*.mp3"),))
     
     for song in songs:
-        song=song.replace("Music/","")
+        song=song.replace("C:/Music/","")
         song=song.replace(".mp3","")
         lbx.insert(END,song)
 
