@@ -27,7 +27,7 @@ def close():
     if ask==1:
         root.destroy()
     else:
-        return
+        return   
     
 def delete():
     lbx.delete(ANCHOR)
@@ -93,7 +93,7 @@ def about():
  fm2=Frame(run,width=f"{screen_width}")
  fm2.pack()
  lb1=Label(fm1,image=sound_img)
- lb1.pack()
+ lb1.pack() 
  lb2=Label(fm2,font=("",14) ,bg="#9AC51E",text="'Sound' is a mp3 player application, which supports Windows operating system\nFor feedback\nContact us: jenashubham60@gmail.com")
  lb2.grid(ipady=20)
  run.mainloop()
@@ -103,8 +103,6 @@ play_img=PhotoImage(file="play.png")
 pause_img=PhotoImage(file="pause.png")
 fwd_img=PhotoImage(file="bwd.png")
 bwd_img=PhotoImage(file="fwd.png")
-#unpause_img=PhotoImage(file="unpause.png")
-#illut_img=PhotoImage(file="illut.png")
 sound_img=PhotoImage(file="sound.png")
 
 #Creating window
@@ -120,12 +118,6 @@ root.configure(bg="#1A1A1A")
 lbx=Listbox(root,border=7,width=23,bg="#9AC51E",font=("",10),relief=GROOVE,selectbackground="#1A1A1A",selectforeground="white",foreground="#1A1A1A") 
 lbx.pack(side=RIGHT,fill=Y)
 
-# l1=Label(root, highlightthickness=30, bg="#00868B")
-# l1.pack(side=LEFT,fill=Y)
-
-# l2=Label(root,highlightthickness=30, bg="#05B8CC")
-# l2.pack(side=BOTTOM,fill=X)
-
 f1=Frame(root,bg="#1A1A1A", height=87, width=100)
 f1.pack(side=BOTTOM)
 f2=Frame(root,bg="#1A1A1A")
@@ -135,10 +127,10 @@ illut_label=Label(f2, image=sound_img, borderwidth=0,relief=GROOVE)
 illut_label.grid(row=0,column=0,padx=20)
 
 #buttons
-b1=Button(f1,text="play",image=play_img, command=play, borderwidth=0,background="#1A1A1A",activebackground="#1A1A1A",relief=RAISED)
-b3=Button(f1,text="fwd",image=fwd_img, command=fwd, borderwidth=0,background="#1A1A1A",activebackground="#1A1A1A",relief=RAISED)
-b4=Button(f1,text="bwd",image=bwd_img, command=bwd, borderwidth=0,background="#1A1A1A",activebackground="#1A1A1A",relief=RAISED)
-b2=Button(f1,text="Pause",image=pause_img, command=lambda: pause(paused), borderwidth=0,background="#1A1A1A",activebackground="#1A1A1A",relief=RAISED)
+b1=Button(f1,image=play_img, command=play, borderwidth=0,background="#1A1A1A",activebackground="#1A1A1A",relief=RAISED)
+b3=Button(f1,image=fwd_img, command=fwd, borderwidth=0,background="#1A1A1A",activebackground="#1A1A1A",relief=RAISED)
+b4=Button(f1,image=bwd_img, command=bwd, borderwidth=0,background="#1A1A1A",activebackground="#1A1A1A",relief=RAISED)
+b2=Button(f1,image=pause_img, command=lambda: pause(paused), borderwidth=0,background="#1A1A1A",activebackground="#1A1A1A",relief=RAISED)
 
 b3.grid(row=0,column=3,padx=10)
 b1.grid(row=0,column=1,padx=10)
@@ -156,7 +148,7 @@ Help=Menu(menubar,tearoff=0)
 menubar.add_cascade(label="File",menu=file)
 menubar.add_cascade(label="New",menu=New)
 menubar.add_cascade(label="Help",menu=Help)
-New.add_command(label="Add songs",command=add_songs)
+New.add_command(label="Add Songs",command=add_songs)    
 Help.add_command(label="About",command=about)
 file.add_command(label="Clear Playlist",command=clr)
 file.add_command(label="Delete",command=delete)
